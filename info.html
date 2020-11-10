@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8"/>
+        <title> info web </title>
+        <link rel="stylesheet" href="info_style.css">
+         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="shufflle.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    </head>
+    
+    <body>
+        
+       
+        
+         <div class="wrapper2">
+            <img class="allergy" src="allergy1.gif" >
+        </div>
+        
+        <div id="popup_allergy" class="popup">
+            <div class= "article">
+                <div class="article_allergy">
+                    해마다 늘어나는 알레르기 환자들을 위해 FUTURE 사에서 알레르기 진단 간편 키트를 출시했다. 간단한 채혈 후 20분 이내로 결과를 알 수 있으며 전국 약국에서 구매할 수 있다.
+                </div>
+            </div>
+         </div>
+        <script type="text/javascript">
+            $(function(){
+            $(".allergy").click(function(e){
+                 var divLeft = e.pageX;
+                var divTop = e.pageY;
+
+                $("#popup_allergy").css({
+                    "top":divTop,
+                    "left":divLeft,
+                    "position":"absolute"
+                    }).toggle();
+                });
+            });
+        </script>
+        <script>
+        var textWrapper = document.querySelector('.article_allergy');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+        anime.timeline({loop:true})
+        .add({
+        targets:'.article_allergy .letter',
+        opacity: [1,0,0],
+        easing: "easeInOutQuad",
+        duration: 1000,
+        delay: (el, i) => 40 * (i+1)
+       });
+        </script>
+        
+        
+        
+           <div class="wrapper2">
+            <img class="mask" src="mask complete_2.gif">
+            </div>
+        
+            <div id="popup_mask" class="popup" >
+                <div class= "article">
+                    <div class="article_mask">
+                        올 가을 신상 마스크 출시 예정된 명품 브랜드들: 샤넬,미우미우,발망,크롬하츠,펜디,휴고보스,디올,구찌,버버리,생로랑,루이비통
+                    </div>
+                </div>
+            </div>
+       <script type="text/javascript">
+            $(function(){
+            $(".mask").click(function(e){
+                var divLeft = e.pageX;
+                var divTop = e.pageY;
+                
+                var sWidth = window.innerWidth;
+                var sHeight = window.innerHeight;
+                var oWidth = $('#popup_mask').width();
+                var oHeight = $('#popup_mask').height();
+                
+                if(divTop + oHeight > sHeight) divTop -= oHeight;
+                if(divLeft + oWidth > sWidth) divLeft -= oWidth;
+                if( divLeft < 0 ) divLeft = 0;
+		        if( divTop < 0 ) divTop = 0;
+            
+                $("#popup_mask").css({
+                    "top":divTop,
+                    "left":divLeft,
+                    "position":"absolute"
+                    }).toggle();
+                });
+            });
+        </script>
+        <script>
+        var textWrapper = document.querySelector('.article_mask');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+             
+        anime.timeline({loop:true})
+        .add({
+        targets:'.article_mask .letter',
+        opacity: [1,0,0],
+        easing: "easeInOutQuad",
+        duration: 1000,
+        delay: (el, i) => 40 * (i+1)
+       });
+        </script>
+        
+           <div class="wrapper2">
+            <img class="vac" src="vac%20list%20complete.gif">
+            </div>
+        
+            <div id="popup_vac" class="popup" >
+                <div class= "article">
+                    <div class="article_vac">
+                        매년 4월 마지막주는 세계보건기구(WHO)가 제정한 예방접종주간이다. 보건부는 작년 4월부터 만 18세 이상 성인을 대상으로 연령과 기저질환에 따라 접종이 권고되는 백신 리스트를 만들고 이를 의무적으로 접종하는 “백신 접종 의무제”를 실행하고 있다.
+                    </div>
+                </div>
+            </div>
+       <script type="text/javascript">
+            $(function(){
+            $(".vac").click(function(e){
+                var divLeft = e.pageX;
+                var divTop = e.pageY;
+                
+                var sWidth = window.innerWidth;
+                var sHeight = window.innerHeight;
+
+                var sHeight = window.innerHeight;
+                var oWidth = $('#popup_vac').width();
+                var oHeight = $('#popup_vac').height();
+                
+                if(divTop + oHeight > sHeight) divTop -= oHeight;
+                if(divLeft + oWidth > sWidth) divLeft -= oWidth;
+                if( divLeft < 0 ) divLeft = 0;
+		        if( divTop < 0 ) divTop = 0;
+
+                $("#popup_vac").css({
+                    "top":divTop,
+                    "left":divLeft,
+                    "position":"absolute"
+                    }).toggle();
+                });
+            });
+        </script>
+        <script>
+        var textWrapper = document.querySelector('.article_vac');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+             
+        anime.timeline({loop:true})
+        .add({
+        targets:'.article_vac .letter',
+        opacity: [1,0,0],
+        easing: "easeInOutQuad",
+        duration: 1000,
+        delay: (el, i) => 40 * (i+1)
+       });
+        </script>
+        
+        
+       <div class="wrapper2">
+            <img class="eye" src="eye%20ver%202%20complete.gif" >
+        </div> 
+        <div id="popup_eye" class="popup" >
+           <div class= "article">
+               <div class="article_eye">
+                늘어난 전자기기 사용시간으로 인해 청소년 안구건조증 환자가 늘어나고 있다. 최근 한 대학병원에서 9세~19세 청소년 500명을 대상으로 안구건조증의 유병률과 건조도를 조사한 결과 4명 중 1명 이상 치료가 꼭 필요한 심한 안구건조증이 있는 것으로 나타났다. 특히 9~13세 청소년의 발병률이 작년에비해 크게 증가했다.
+               </div>
+            </div>
+        </div>
+     <script type="text/javascript">
+            $(function(){
+            $(".eye").click(function(e){
+                var divLeft = e.pageX;
+                var divTop = e.pageY;
+                
+                var sWidth = window.innerWidth;
+                var sHeight = window.innerHeight;
+                
+                var oWidth = $('#popup_eye').width();
+                var oHeight = $('#popup_eye').height();
+                
+                if(divTop + oHeight > sHeight) divTop -= oHeight;
+                if(divLeft + oWidth > sWidth) divLeft -= oWidth;
+                if( divLeft < 0 ) divLeft = 0;
+		        if( divTop < 0 ) divTop = 0;
+
+                $("#popup_eye").css({
+                    "top":divTop,
+                    "left":divLeft,
+                    "position":"absolute"
+                    }).toggle();
+                });
+            });
+        </script>
+        <script>
+        var textWrapper = document.querySelector('.article_eye');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+             
+        anime.timeline({loop:true})
+        .add({
+        targets:'.article_eye .letter',
+        opacity: [1,0,0],
+        easing: "easeInOutQuad",
+        duration: 1000,
+        delay: (el, i) => 40 * (i+1)
+       });
+        </script>
+        
+        
+         <div class="wrapper2">
+             <img class="lock" src="lock%20complete%20ver%202%20.gif" >
+        </div>
+            <div id="popup_lock" class="popup" >
+                <div class= "article">
+                   <div class="article_lock">
+                     
+                       학생들의 스마트폰 중독을 예방하기 위해 정부가 스마트폰 사용 시간을 제한하기로 했습니다. 당장 오는 10일부터 시행되는데, 17세 미만 청소년은 의무적으로 정부가 제공하는 “Teen Timer”앱을 설치해야 합니다. 1일 기기 사용 시간이 8시간을 지날 경우 앱이 실행되며, 기본 문자와 전화를 제외한 기능을 사용할 수 없게 됩니다.
+                   </div>
+                </div>
+            </div>
+        <script type="text/javascript">
+            $(function(){
+            $(".lock").click(function(e){
+               var divLeft = e.pageX;
+                var divTop = e.pageY;
+                
+                var sWidth = window.innerWidth;
+                var sHeight = window.innerHeight;
+                
+                var oWidth = $('#popup_lock').width();
+                var oHeight = $('#popup_lock').height();
+                
+                if(divTop + oHeight > sHeight) divTop -= oHeight;
+                if(divLeft + oWidth > sWidth) divLeft -= oWidth;
+                if( divLeft < 0 ) divLeft = 0;
+		        if( divTop < 0 ) divTop = 0;
+
+                $("#popup_lock").css({
+                    "top":divTop,
+                    "left":divLeft,
+                    "position":"absolute"
+                    }).toggle();
+                });
+            });
+        </script>
+        <script>
+        var textWrapper = document.querySelector('.article_lock');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+             
+        anime.timeline({loop:true})
+        .add({
+        targets:'.article_lock .letter',
+        opacity: [1,0,0],
+        easing: "easeInOutQuad",
+        duration: 1000,
+        delay: (el, i) => 40 * (i+1)
+       });
+        </script>
+        
+        
+        <div class="wrapper2">
+            <img class="scroll"  src="who%20scroll.gif" >
+         </div>
+            <div id="popup_scroll" class="popup" >
+                <div class= "article">
+                   <div class="article_scroll">
+                           스마트폰 중독을 마약, 알코올, 담배, 게임처럼 질병으로 분류해 치료 대상으로 삼아야 한다는 안건이 세계보건기구(WHO)에서 통과됐다. 게임 이용 장애(6C51)과 같은 분류인 중독성 행위 장애로 정식 질병코드(6C52)가 부여됐다.
+                   </div>
+                </div>
+            </div>
+       <script type="text/javascript">
+            $(function(){
+            $(".scroll").click(function(e){
+                var divLeft = e.pageX;
+                var divTop = e.pageY;
+                
+                var sWidth = window.innerWidth;
+                var sHeight = window.innerHeight;
+                
+                var oWidth = $('#popup_scroll').width();
+                var oHeight = $('#popup_scroll').height();
+                
+                if(divTop + oHeight > sHeight) divTop -= oHeight;
+                if(divLeft + oWidth > sWidth) divLeft -= oWidth;
+                if( divLeft < 0 ) divLeft = 0;
+		        if( divTop < 0 ) divTop = 0;
+
+                $("#popup_scroll").css({
+                    "top":divTop,
+                    "left":divLeft,
+                    "position":"absolute"
+                    }).toggle();
+                });
+            });
+        </script>
+        <script>
+        var textWrapper = document.querySelector('.article_scroll');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+             
+        anime.timeline({loop:true})
+        .add({
+        targets:'.article_scroll .letter',
+        opacity: [1,0,0],
+        easing: "easeInOutQuad",
+        duration: 1000,
+        delay: (el, i) => 40 * (i+1)
+       });
+        </script>
+        
+        <div class="wrapper">
+         <img  class="disinfect" src="disinfect-complete.gif">
+        </div>
+            <div id="popup_disinfect" class="popup" >
+                <div class= "article">
+                   <div class="article_disinfect">
+                        잦은 전염병 발병으로 인해 현관에 설치하는 전신 소독기계가 인기다. 특히 신혼부부들 사이에서 공기청정기,의류건조기 등 이른바 청정가전이 필수 혼수품으로 자리잡으면서 이 같은 제품들의 판매량이 전년 동기 대비 22%가량 크게 늘었다. 
+
+                   </div>
+                </div>
+            </div>
+      <script type="text/javascript">
+            $(function(){
+            $(".disinfect").click(function(e){
+                var divLeft = e.pageX;
+                var divTop = e.pageY;
+                
+                var sWidth = window.innerWidth;
+                var sHeight = window.innerHeight;
+                
+                var oWidth = $('#popup_disinfect').width();
+                var oHeight = $('#popup_disinfect').height();
+                
+                if(divTop + oHeight > sHeight) divTop -= oHeight;
+                if(divLeft + oWidth > sWidth) divLeft -= oWidth;
+                if( divLeft < 0 ) divLeft = 0;
+		        if( divTop < 0 ) divTop = 0;
+
+                $("#popup_disinfect").css({
+                    "top":divTop,
+                    "left":divLeft,
+                    "position":"absolute"
+                    }).toggle();
+                });
+            });
+        </script>
+        <script>
+        var textWrapper = document.querySelector('.article_disinfect');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+             
+        anime.timeline({loop:true})
+        .add({
+        targets:'.article_disinfect .letter',
+        opacity: [1,0,0],
+        easing: "easeInOutQuad",
+        duration: 1000,
+        delay: (el, i) => 40 * (i+1)
+       });
+        </script>
+        
+     
+        <div class="wrapper">
+            <img class="cgv" src="cgv_final_light.gif">
+        </div>
+            <div id="popup_cgv" class="popup" >
+               <div class= "article">
+                   <div class="article_cgv">
+                        온라인 영화 시장의 확대와 더불어 신규 바이러스 감염증 직격탄을 맞은 CGV가 이달 20일부터 3개의 상영관 영업을 중단한다. 15일 CGV는 홈페이지 공지글을 통해 오는 20일부터 CGV 왕십리, 성신여대 입구, 신촌 아트레온 지점의 영업을 중단한다고 밝혔다. 
+                   </div>
+                </div>
+            </div>
+        <script type="text/javascript">
+            $(function(){
+            $(".cgv").click(function(e){
+                var divLeft = e.pageX;
+                var divTop = e.pageY;
+                
+                var sWidth = window.innerWidth;
+                var sHeight = window.innerHeight;
+                
+                var oWidth = $('#popup_cgv').width();
+                var oHeight = $('#popup_cgv').height();
+                
+                if(divTop + oHeight > sHeight) divTop -= oHeight;
+                if(divLeft + oWidth > sWidth) divLeft -= oWidth;
+                if( divLeft < 0 ) divLeft = 0;
+		        if( divTop < 0 ) divTop = 0;
+
+                $("#popup_cgv").css({
+                    "top":divTop,
+                    "left":divLeft,
+                    "position":"absolute"
+                    }).toggle();
+                });
+            });
+        </script>
+        <script>
+        var textWrapper = document.querySelector('.article_cgv');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+             
+        anime.timeline({loop:true})
+        .add({
+        targets:'.article_cgv .letter',
+        opacity: [1,0,0],
+        easing: "easeInOutQuad",
+        duration: 1000,
+        delay: (el, i) => 40 * (i+1)
+       });
+        </script>
+        
+        <div class="wrapper">
+            <img class="mangost" src="mangost-complete_light.gif">
+        </div>
+            <div id="popup_mangost" class="popup" >
+               <div class= "article">
+                   <div class="article_mangost">
+                        속초의 명품 특산물 망고스틴이 올해 판매를 시작했다.
+                        속초시 명품 망고스틴 공식 쇼핑몰 www.sokcho-mangosteen.co.kr를 통해 산지 직배송 제품을 구매할 수 있다.
+                   </div>
+                </div>
+            </div>
+        <script type="text/javascript">
+            $(function(){
+            $(".mangost").click(function(e){
+                var divLeft = e.pageX;
+                var divTop = e.pageY;
+                
+                  var sWidth = window.innerWidth;
+                var sHeight = window.innerHeight;
+                
+                var oWidth = $('#popup_mangost').width();
+                var oHeight = $('#popup_mangost').height();
+                
+                if(divTop + oHeight > sHeight) divTop -= oHeight;
+                if(divLeft + oWidth > sWidth) divLeft -= oWidth;
+                if( divLeft < 0 ) divLeft = 0;
+		        if( divTop < 0 ) divTop = 0;
+
+                $("#popup_mangost").css({
+                    "top":divTop,
+                    "left":divLeft,
+                    "position":"absolute"
+                    }).toggle();
+                });
+            });
+        </script>
+        <script>
+        var textWrapper = document.querySelector('.article_mangost');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+             
+        anime.timeline({loop:true})
+        .add({
+        targets:'.article_mangost .letter',
+        opacity: [1,0,0],
+        easing: "easeInOutQuad",
+        duration: 1000,
+        delay: (el, i) => 40 * (i+1)
+       });
+        </script>
+            
+        
+           <div class="wrapper3">
+            <img class="home" src="work-home-complete_70px.gif">
+            </div>
+            <div id="popup_home" class="popup" >
+                <div class= "article">
+                   <div class="article_home">
+                        요즘 직장인들 상황.gif  
+                   </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+            $(function(){
+            $(".home").click(function(e){
+                var divLeft = e.pageX;
+                var divTop = e.pageY;
+                
+                var sWidth = window.innerWidth;
+                var sHeight = window.innerHeight;
+                
+                var oWidth = $('#popup_home').width();
+                var oHeight = $('#popup_home').height();
+                
+                if(divTop + oHeight > sHeight) divTop -= oHeight;
+                if(divLeft + oWidth > sWidth) divLeft -= oWidth;
+                if( divLeft < 0 ) divLeft = 0;
+		        if( divTop < 0 ) divTop = 0;
+
+                $("#popup_home").css({
+                    "top":divTop,
+                    "left":divLeft,
+                    "position":"absolute"
+                    }).toggle();
+                });
+            });
+        </script>
+        <script>
+        var textWrapper = document.querySelector('.article_home');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+             
+        anime.timeline({loop:true})
+        .add({
+        targets:'.article_home .letter',
+        opacity: [1,0,0],
+        easing: "easeInOutQuad",
+        duration: 1000,
+        delay: (el, i) => 40 * (i+1)
+       });
+        </script>
+            
+        
+        <div class="wrapper">
+            <img class="boots" src="boots-complete_light.gif">;
+        </div>
+            <div id="popup_boots" class="popup" >
+                <div class= "article">
+                   <div class="article_boots">
+                       방수 액세서리 및 의류를 선보이는 컨템퍼러리 레인웨어 라이프 스타일 브랜드 “RD”가 올해 썸머 레인부츠 라인업을 공개했다. 매 여름 길어지는 장마로 인해 레인부츠는 더 이상 패션 아이템이 아닌 생활 필수품으로 자리 잡으면서 이번 컬렉션은 더 편리하고 안전하게 신을 수 있는 기능성에 초점을 맞춰 기대를 모으고 있다.
+                   </div>
+                </div>
+            </div>
+  
+       <script type="text/javascript">
+            $(function(){
+            $(".boots").click(function(e){
+                var divLeft = e.pageX;
+                var divTop = e.pageY;
+                  var sWidth = window.innerWidth;
+                var sHeight = window.innerHeight;
+                
+                var oWidth = $('#popup_boots').width();
+                var oHeight = $('#popup_boots').height();
+                
+                if(divTop + oHeight > sHeight) divTop -= oHeight;
+                if(divLeft + oWidth > sWidth) divLeft -= oWidth;
+                if( divLeft < 0 ) divLeft = 0;
+		        if( divTop < 0 ) divTop = 0;
+
+                $("#popup_boots").css({
+                    "top":divTop,
+                    "left":divLeft,
+                    "position":"absolute"
+                    }).toggle();
+                });
+            });
+        </script>
+        <script>
+        var textWrapper = document.querySelector('.article_boots');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+             
+        anime.timeline({loop:true})
+        .add({
+        targets:'.article_boots .letter',
+        opacity: [1,0,0],
+        easing: "easeInOutQuad",
+        duration: 1000,
+        delay: (el, i) => 40 * (i+1)
+       });
+        </script>
+            
+           
+           <div class="wrapper">
+            <img class="dispos" src="dispos-compelet_light.gif" >
+            </div>
+            <div id="popup_dispos" class="popup" >
+                <div class= "article">
+                   <div class="article_dispos">
+                        카페와 음식점에서 음식을 테이크아웃할 경우 지불해야했던 일회용품 사용에 따른 환경부담금이 인상됩니다.
+                        환경부는 지난해 9월 1300원에서 1500원으로 올렸던 환경부담금을 올해 11월부터는 1700원으로 인상하기로 결정했습니다.
+                   </div>
+                </div>
+            </div>
+   
+        <script type="text/javascript">
+            $(function(){
+            $(".dispos").click(function(e){
+                var divLeft = e.pageX;
+                var divTop = e.pageY;
+                
+                  var sWidth = window.innerWidth;
+                var sHeight = window.innerHeight;
+                
+                var oWidth = $('#popup_dispos').width();
+                var oHeight = $('#popup_dispos').height();
+                
+                if(divTop + oHeight > sHeight) divTop -= oHeight;
+                if(divLeft + oWidth > sWidth) divLeft -= oWidth;
+                if( divLeft < 0 ) divLeft = 0;
+		        if( divTop < 0 ) divTop = 0;
+
+                $("#popup_dispos").css({
+                    "top":divTop,
+                    "left":divLeft,
+                    "position":"absolute"
+                    }).toggle();
+                });
+            });
+        </script>
+        <script>
+        var textWrapper = document.querySelector('.article_dispos');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+             
+        anime.timeline({loop:true})
+        .add({
+        targets:'.article_dispos .letter',
+        opacity: [1,0,0],
+        easing: "easeInOutQuad",
+        duration: 1000,
+        delay: (el, i) => 40 * (i+1)
+       });
+        </script>
+            
+        
+         <div class="wrapper">
+            <img class="anna" src="ANNA_complete.gif">
+        </div>
+            <div id="popup_anna" class="popup" >
+                <div class= "article">
+                   <div class="article_anna">
+                       인공지능 유모 “ANNA”의 인기가 대단하다. 일부 대형 맘 카페에서는 이른바 “공구”까지 진행되고 있다. AI 유모 “ANNA”는 FUTURE 사에서 만든 육아 전용 인공지능 스피커로 모니터링 서비스, 유아가 내는 음성과 패턴 분석, 부모의 목소리 합성음 등 획기적인 기능과 지속적인 소프트웨어 업데이트로 인기를 끌고 있다. 
+                   </div>
+                </div>
+            </div>
+     
+         <script type="text/javascript">
+            $(function(){
+            $(".anna").click(function(e){
+                var divLeft = e.pageX;
+                var divTop = e.pageY;
+                
+                var sWidth = window.innerWidth;
+                var sHeight = window.innerHeight;
+                
+                var oWidth = $('#popup_anna').width();
+                var oHeight = $('#popup_anna').height();
+                
+                if(divTop + oHeight > sHeight) divTop -= oHeight;
+                if(divLeft + oWidth > sWidth) divLeft -= oWidth;
+                if( divLeft < 0 ) divLeft = 0;
+		        if( divTop < 0 ) divTop = 0;
+
+                $("#popup_anna").css({
+                    "top":divTop,
+                    "left":divLeft,
+                    "position":"absolute"
+                    }).toggle();
+                });
+            });
+        </script>
+        <script>
+        var textWrapper = document.querySelector('.article_anna');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+             
+        anime.timeline({loop:true})
+        .add({
+        targets:'.article_anna .letter',
+        opacity: [1,0,0],
+        easing: "easeInOutQuad",
+        duration: 1000,
+        delay: (el, i) => 40 * (i+1)
+       });
+        </script>
+            
+      
+        <div class="wrapper">
+            <img class="pill"  src="pill.gif" >
+        </div>
+            <div id="popup_pill" class="popup" >
+                <div class= "article">
+                   <div class="article_pill">
+                    지난해 인기를 끌었던 독일 회사 바디 시스템즈(Body Systems)의 전자 캡슐이 한국에 정식 수입된다. 이 알약은 전기 파동을 일으켜 신경과 뇌가 마치 포만감을 느끼고 있는 것처럼 착각하도록 만들어 살을 빼는 것에 도움을 주며, 약 3주간 뱃속에 머무르다 배출된다.
+                   </div>
+                </div>
+            </div>
+       <script type="text/javascript">
+            $(function(){
+            $(".pill").click(function(e){
+                var divLeft = e.pageX;
+                var divTop = e.pageY;
+                
+                  var sWidth = window.innerWidth;
+                var sHeight = window.innerHeight;
+                
+                var oWidth = $('#popup_pill').width();
+                var oHeight = $('#popup_pill').height();
+                
+                if(divTop + oHeight > sHeight) divTop -= oHeight;
+                if(divLeft + oWidth > sWidth) divLeft -= oWidth;
+                if( divLeft < 0 ) divLeft = 0;
+		        if( divTop < 0 ) divTop = 0;
+
+                $("#popup_pill").css({
+                    "top":divTop,
+                    "left":divLeft,
+                    "position":"absolute"
+                    }).toggle();
+                });
+            });
+        </script>
+        <script>
+        var textWrapper = document.querySelector('.article_pill');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+             
+        anime.timeline({loop:true})
+        .add({
+        targets:'.article_pill .letter',
+        opacity: [1,0,0],
+        easing: "easeInOutQuad",
+        duration: 1000,
+        delay: (el, i) => 40 * (i+1)
+       });
+        </script>
+        
+      
+        <div class="wrapper">
+            <img class="remote" src="remote-complete.gif" >
+        </div>
+            <div id="popup_remote" class="popup" >
+                <div class= "article">
+                   <div class="article_remote">
+                       [초등학생 10분 상식] <br>
+                    현재는 일상에서 보기 어려워진 리모컨! 과거에는 텔레비전, 에어컨, 선풍기와 같은 전자제품을 사용할 때 지금처럼 어플리케이션이 아닌 이 리모컨을 이용해서 사용했답니다.
+                   </div>
+                </div>
+            </div>
+      
+         <script type="text/javascript">
+            $(function(){
+            $(".remote").click(function(e){
+                var divLeft = e.pageX;
+                var divTop = e.pageY;
+                  var sWidth = window.innerWidth;
+                var sHeight = window.innerHeight;
+                
+                var oWidth = $('#popup_remote').width();
+                var oHeight = $('#popup_remote').height();
+                
+                if(divTop + oHeight > sHeight) divTop -= oHeight;
+                if(divLeft + oWidth > sWidth) divLeft -= oWidth;
+                if( divLeft < 0 ) divLeft = 0;
+		        if( divTop < 0 ) divTop = 0;
+
+                $("#popup_remote").css({
+                    "top":divTop,
+                    "left":divLeft,
+                    "position":"absolute"
+                    }).toggle();
+                });
+            });
+        </script>
+        <script>
+        var textWrapper = document.querySelector('.article_remote');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+             
+        anime.timeline({loop:true})
+        .add({
+        targets:'.article_remote .letter',
+        opacity: [1,0,0],
+        easing: "easeInOutQuad",
+        duration: 1000,
+        delay: (el, i) => 40 * (i+1)
+       });
+        </script>
+        
+        
+        <img class="background" src="paperplane-complete.gif" >;
+
+        <script>
+        $('.wrapper,.wrapper2').shuffle();
+        </script>
+        
+    </body>
+</html>
